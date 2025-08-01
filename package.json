@@ -1,5 +1,5 @@
 {
-  "name": "remark-mdx-toc-export",
+  "name": "@toolsopen/remark-mdx-toc-export",
   "version": "0.0.2",
   "description": "a plugin to export toc from mdx file",
   "main": "index.ts",
@@ -19,6 +19,9 @@
   "author": "Tools Open <zengqi3936@gmail.com> (https://toolsopen.com)",
   "license": "ISC",
   "dependencies": {
-    "remark-mdx-toc-export": "^0.0.1"
+    "mdast": "^2.3.2",
+    "mdast-util-mdx": "^3.0.0",
+    "unified": "^11.0.5",
+    "unist-util-visit": "^5.0.0"
   }
 }
