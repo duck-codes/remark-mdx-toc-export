@@ -1,3 +1,3 @@
 # REMARK-MDX-TOC-EXPORT
 
-Hello World!
+a plugin to export toc from mdx file
