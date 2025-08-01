@@ -17,13 +17,22 @@ const remarkTocExport: Plugin<[], Root> = () => {
     const headings: Heading[] = []
 
     visit(tree, 'heading', node => {
-      const text = node.children
-        .filter(
+      // 防护检查：确保 node.children 存在且是数组
+      if (!node.children || !Array.isArray(node.children)) {
+        return
+      }
+
+      const text = node.children.filter(
           (child): child is Text =>
             child.type === 'text' || child.type === 'inlineCode'
         )
         .map(child => child.value)
         .join('')
+
+      // 如果提取的文本为空，跳过这个标题
+      if (!text.trim()) {
+        return
+      }
 
       const slug = text
         .toLowerCase()
@@ -113,6 +122,9 @@ const remarkTocExport: Plugin<[], Root> = () => {
     }
 
     // 将导出节点插入到 AST 的开头
+    if (!tree.children) {
+      tree.children = []
+    }
     tree.children.unshift(exportNode)
   }
 }
