@@ -24,11 +24,6 @@ const remarkTocExport: Plugin<[], Root> = () => {
         .map(child => child.value)
         .join('')
 
-      // 如果提取的文本为空，跳过这个标题
-      if (!text.trim()) {
-        return
-      }
-
       const slug = text
         .toLowerCase()
         .trim()
