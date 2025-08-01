@@ -1,6 +1,6 @@
 {
   "name": "remark-mdx-toc-export",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a plugin to export toc from mdx file",
   "main": "index.ts",
   "scripts": {
