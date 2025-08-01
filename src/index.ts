@@ -17,11 +17,6 @@ const remarkTocExport: Plugin<[], Root> = () => {
     const headings: Heading[] = []
 
     visit(tree, 'heading', node => {
-      // 防护检查：确保 node.children 存在且是数组
-      if (!node.children || !Array.isArray(node.children)) {
-        return
-      }
-
       const text = node.children.filter(
           (child): child is Text =>
             child.type === 'text' || child.type === 'inlineCode'
@@ -122,9 +117,6 @@ const remarkTocExport: Plugin<[], Root> = () => {
     }
 
     // 将导出节点插入到 AST 的开头
-    if (!tree.children) {
-      tree.children = []
-    }
     tree.children.unshift(exportNode)
   }
 }
