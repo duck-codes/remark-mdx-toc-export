@@ -2,8 +2,13 @@
   "name": "@toolsopen/remark-mdx-toc-export",
   "version": "0.0.3",
   "description": "a plugin to export toc from mdx file",
-  "main": "index.ts",
+  "main": "dist/index.ts",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,5 +28,8 @@
     "mdast-util-mdx": "^3.0.0",
     "unified": "^11.0.5",
     "unist-util-visit": "^5.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
   }
 }

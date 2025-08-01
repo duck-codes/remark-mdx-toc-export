@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "target": "ES2017",
+      "module": "ESNext",
+      "declaration": true,
+      "outDir": "dist",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "moduleResolution": "Node",
+      "forceConsistentCasingInFileNames": true
+    },
+    "include": ["src/index.ts"]
+  }
+  
