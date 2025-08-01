@@ -1,0 +1,24 @@
+{
+  "name": "remark-mdx-toc-export",
+  "version": "0.0.1",
+  "description": "a plugin to export toc from mdx file",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git"
+  },
+  "keywords": [
+    "mdx",
+    "toc",
+    "nextjs",
+    "remark"
+  ],
+  "author": "Tools Open <zengqi3936@gmail.com> (https://toolsopen.com)",
+  "license": "ISC",
+  "dependencies": {
+    "remark-mdx-toc-export": "^0.0.1"
+  }
+}
